@@ -12,3 +12,9 @@ Then create a file named .eslintrc.json with following contents in the root fold
   "extends": "react-app"
 }
 ```
+
+## PORT FORWARDING FOR EC2 -
+```js
+sudo iptables -t nat -L
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080 # 8080 -> 8080
+```
