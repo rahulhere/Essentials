@@ -16,6 +16,6 @@ Then create a file named .eslintrc.json with following contents in the root fold
 ## PORT FORWARDING FOR EC2 -
 ```js
 sudo iptables -t nat -L
-sudo iptables -t nat -A PREROUTING -p tcp --dport 80:443 -j REDIRECT --to-ports 8000 # 8000 -> 8000
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8000 # 8000 -> 8000
 ```
-Response that you will want: `tcp dpts:http:https redir ports 8000`
+Response that you will want: `tcp dpts:http redir ports 8000`
